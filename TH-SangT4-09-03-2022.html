@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: auto;
+        }
+        body {
+            background-image: url(background.jpg);
+        }
+        .wrapper {
+            height: 700px;
+            width: 1089px;
+            background-color: whitesmoke;
+        }
+        nav {
+            height: 50px;
+            width: 100%;
+            background-color: aqua;
+            line-height: 50px;
+        }
+        header {
+            width: 1089px;
+            height: 150px;
+            background-image: url(../HTCNW/header.jpg);
+            float: left;
+        }
+        .content {
+            height: 300px;
+            width: 100%;
+            background-color: rgb(173, 230, 18);
+        }
+        aside {
+            height: 100%;
+            width: 40%;
+            background-color: aquamarine;
+            float: left;
+        }
+        section {
+            height: 100%;
+            width: 60%;
+            background-color: cornflowerblue;
+            float: left;
+        }
+        .menu li {
+            height: 100%;
+            width: 130px;
+            background-color: antiquewhite;
+            float: left;
+            line-height: 50px;
+            text-indent: 20px;
+            list-style: none;
+            position: relative;
+        }
+        a {
+            color: blueviolet;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .menu li:hover {
+            background-color: black;
+        }
+        li:hover>a {
+            color: whitesmoke;
+            font-size: italic;
+        }
+        .menu li .submenu {
+            display: none;
+            position: absolute;
+        }
+        .menu li:hover .submenu {
+            display: block;
+        }
+        nav span form #btnGo {
+            padding: 3px;
+            border-radius: 50%;
+        }
+        nav span form #txtEmail {
+            padding: 3px;
+            border-radius: 10%;
+        }
+        .wrapper header p {
+            font-size: 50px;
+            text-shadow: 10px 20px 20px green;
+        }
+        .wrapper header:hover p {
+            transform: rotate(25deg);
+        }
+
+    </style>
+</head>
+<body>
+     <div class="wrapper">
+         <nav>
+             <ul class="menu">
+                 <li><a href="https://zingmp3.vn/"></a></li>
+                 <li><a href="">SERVICES</a></li>
+                 <li><a href="">CONTACT</a></li>
+                 <ul class="submenu">
+                    <li><a href=""> Phone</a></li>
+                    <li><a href=""> Social Media</a></li>
+                    <li><a href=""> Marketing</a></li>
+                     
+                 </ul>
+                </li>
+                <li><a href=""> About</a></li>
+                <li><a href=""> Support</a></li>
+             </ul>
+             <span>
+                 <form action=""method="post">
+                     <label for="Email">Email:</label>
+                     <input type="email" name="txtEmail" required placeholder="Ten dang nhap" minlength="20">
+                     <input type="submit" value="Go" id="btnGo" >
+                 </form>
+             </span>
+         </nav>
+         <header>
+             <p>Banner</p>
+         </header>
+         <div class="content">
+             <aside>
+                 <article>
+                     <h2>Content 1</h2>
+                     <img src="" alt="" srcset="">
+                 </article>
+                 <article>
+                     <h2>Content 2</h2>
+                     <img src="" alt="" srcset="">
+
+                 </article>
+                 <article>
+                     <h2>Content 3</h2>
+                     <img src="" alt="" srcset="">
+                 </article>
+             </aside>
+             <section>
+                 <h2>Dang ki danh sach</h2>
+                 <form action="dangky.php" method="post">
+                     <fieldset>
+                         <legend>Thong tin cua ban</legend>
+                         <label for="lblHoTen">Ho ten: </label>
+                         <input type="text" name="txtHT" required placeholder="Nhap ho ten" minlength="20"> <br> <br>
+                         <label for="lblGioiTinh">Gioi tinh: </label>
+                         <input type="radio" name="radNam" value="anm">
+                         <label>Nam</label>
+                         <input type="radio" name="radNam" id="radNu" value="nu"> <label>Nu</label>
+                         <br> <br>
+                         <label for="ngaySinh">Ngay Sinh</label>
+                         <input type="date" name="txtDate" id="txtDate" required placeholder="Ngay Sinh" minlength="20" pattern="dd/MM/yyyy"<br> <br>
+                         <label for="lblHoTen">Ho ten: </label>
+                         <input type="text" name="txtHT" id="txtHT" required aria-placeholder="Nhap Ho Ten" minlength="20" <br> <br>
+                         <input type="submit" value="GO">
+
+                     </fieldset>
+                     </form>
+             </section>
+         </div>
+         <footer></footer>
+     </div>
+    
+</body>
+</html>
